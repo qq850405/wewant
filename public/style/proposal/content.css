@@ -1,0 +1,290 @@
+  main{
+    position: relative;
+    background-color: rgb(236,234,227, 0.5);
+    background-attachment: fixed;
+    background-size: 150%;
+    background-repeat: no-repeat;
+    background-position: top center;
+    padding: 200px 0 100px 0;
+}
+
+.content{
+    position: relative;
+    background-color: white;
+    width: 1000px;
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0 auto;
+    padding: 50px 0;
+    font-size: 0px;
+    border: lightgray solid 1px;
+    border-radius: 5px;
+}
+
+
+.content-title1{
+    text-align: center;
+    width: 700px;
+    margin: 30px auto 20px auto;
+    font-family: "微軟正黑體";
+    font-weight: bold;
+    font-size: 30px;
+    letter-spacing: 1px;
+}
+
+.content-title2{
+    text-align: center;
+    width: 400px;
+    margin: 30px auto 20px auto;
+    font-size: 20px;
+    letter-spacing: 1px;
+    line-height: 25px;
+    color: gray;
+}
+
+
+.progress{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    margin: 40px auto;
+}
+
+.progress .circle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgb(255,212,196);
+    cursor: pointer;
+}
+
+.progress .line{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 4px;
+    background-color: rgb(255,212,196);
+}
+
+.progress .active{
+    background-color: rgb(189,80,70);
+}
+
+.title{
+    position: absolute;
+    left: 50%;
+    top: 40px;
+    transform: translateX(-50%);
+    font-family: "宋體";
+    font-weight: bold;
+    font-size: 25px;
+    text-align: center;
+    opacity: 0;
+}
+
+.title-active{
+    opacity: 1;
+    transform: translateX(-50%);
+}
+
+
+.content > hr{
+    width: 90%;
+    border: 0; 
+    height: 1px; 
+    margin-bottom: 40px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+}
+
+.description{
+    position: absolute;
+    float: right;
+    right: 9%;
+    background-color: rgb(248,248,248);
+    width: 26%;
+    padding: 10px;
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: 1px;
+    font-family: "微軟正黑體";
+    white-space: normal;
+    opacity: 0;
+    z-index: -1;
+}
+
+.description i{
+    color: rgb(189,50,40);
+}
+
+.description h1{
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin: 0 0 10px 0;
+}
+
+.content form{
+    width: 100%;
+}
+
+.info{
+    position: relative;
+    left: 0;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 60%;
+    font-family: "微軟正黑體";
+    font-size: 15px;
+    opacity: 0;
+    z-index: -1;
+}
+
+.current{
+    opacity: 1;
+    z-index: 1;
+}
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0 0 40px 0;
+    width: 85%;
+    white-space: normal;
+}
+
+.form-group label{
+    margin: 0 0 10px 0;
+    font-weight: bold;
+    font-size: 17px;
+    color: rgb(101,101,101);
+}
+
+.form-group input{
+    height: 45px;
+    width: 100%;
+    border-color: lightgray;
+}
+
+.form-group #intro{
+    width: 100px;
+    height: 50px;
+}
+
+.form-group input[type=file]{
+    display: none;
+}
+
+.form-group .img-upload{
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: inline-block;
+    height: 40px;
+    padding: 10px 12px;
+    font-weight: normal;
+    background-color: rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.img-upload:hover{
+    color: white;
+    border-radius: 5px;
+    background-color: rgb(189,80,70);
+}
+
+.info .form-group > span{
+    position: relative;
+    left: 0;
+    color: gray;
+    margin: 10px 0 0 0;
+}
+
+
+.proposal-img{
+    width: 100%;
+    height: 330px;
+    border: black solid 1px;
+    background-color: lightgray;
+    color: gray;
+    text-align: center;
+    font-size: 30px;
+    line-height: 330px;
+    margin: 10px 0 30px 0;
+}
+
+.info input[type=button], .info input[type=submit]{
+    position: relative;
+    right: 50px;
+}
+
+
+
+input[type=submit], button, input[type=button]{
+    color: white;
+    background-color: rgb(189,65,55);
+    border-radius: 8px;
+    box-shadow: 0px 2px 3px 0px #888888;
+    transition: 0.25s;
+}
+
+input[type=submit]:hover, button:hover, input[type=button]:hover{
+    color: white;
+    box-shadow: 0px 7px 8px 0px #888888;
+}
+
+.ui-datepicker {   
+      font-size:62.5%; 
+}
+
+.ui-datepicker-header{
+    color: rgb(189,65,55);
+}
+
+@media(max-width: 1050px){
+    .content{
+        width: 700px;
+    }
+
+    .progress{
+        width: 80%;
+    }
+
+    .info input[type=button], .info input[type=submit]{
+        position: relative;
+        right: 15px;
+    }
+}
+
+@media(max-width: 750px){
+   .content{
+       width: 450px;
+   }
+
+   .info{
+       align-items: center;
+       width: 100%;
+   }
+
+   .description{
+       display: none;
+   }
+
+    .info input[type=button], .info input[type=submit]{
+        position: relative;
+        left: 0;
+    }
+}
+
+@media(max-width: 500px){
+    .content{
+        width: 90%;
+    }
+
+}

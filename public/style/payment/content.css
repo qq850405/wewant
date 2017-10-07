@@ -1,0 +1,227 @@
+
+
+main{
+    background-color: rgb(243,243,241);
+    padding: 150px 0 50px 0;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    background-color: tranparent;
+    width: 1000px;
+    margin: 0 auto;
+}
+
+h1.project-name{
+    text-align: center;
+    font-family: "微軟正黑體";
+    font-size: 25px;
+}
+
+.title{
+    margin: 55px 0 30px 10px;
+    font-family: "微軟正黑體";
+    font-weight: bold;
+    color: rgb(189, 70, 60);
+}
+
+.payment-wrapper{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0 0 0;
+}
+
+.payment-method-toggle{
+    float: left;
+    border: black solid 1px;
+    border-radius: 5px;
+    width: 10%;
+    text-align: center;
+    padding: 8px 0;
+    margin: 40px 0 0 0;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.payment-method-toggle .fa-caret-down{
+    position: relative;
+    top: 15%;
+    font-size: 25px;
+}
+
+.payment-method-toggle.is-opened{
+    border-radius: 5px 5px 0 0;
+}
+
+
+.payment-method{
+    height: 0px;
+    overflow: hidden;
+    text-align: center;
+    border: black solid 0px;
+    border-radius: 0 0 5px 5px;
+    width: 10%;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.payment-method li{
+    padding: 10px 0;
+    border-bottom: black solid 1px;
+}
+
+.payment-method li:last-child{
+    border: none;
+}
+
+.payment-method.is-opened{
+    height: 75px;
+    border: black solid 1px;
+}
+
+.payment-form{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 0 0 0;
+}
+
+.payment-description{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30%;
+    font-family: "微軟正黑體";
+    border-left: gray solid 1px;
+}
+
+.payment-detail{
+    padding: 10px 0 30px 30px;
+}
+
+.payment-detail hr{
+    margin: 20px 0 10px 0;
+}
+
+.payment-detail > .pay-content{
+    font-weight: bold;
+    margin: 10px 0 0 10px;
+    font-size: 20px;
+}
+
+.payment-description .money{
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.website-description{
+    padding: 30px 0 50px 30px;
+    line-height: 25px;
+}
+
+.website-description h1{
+   font-weight: bold;
+   font-size: 17px;
+   padding: 20px 0 0 0;
+   margin: 0 0 10px 0;
+}
+
+.website-description p{
+    font-size: 14px;
+}
+
+.payment-info{
+    font-family: "微軟正黑體";
+    margin: 0 30px 30px 0;
+}
+
+.payment-info h1{
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.payment-info p{
+    padding: 0 0 20px 20px;
+    line-height: 20px;
+}
+
+.card-info{
+    display: flex;
+    flex-direction: column;
+    font-family: "微軟正黑體";
+}
+
+.card-info h1{
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.card-info .form-group{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.card-info .form-group label{
+    font-weight: bold;
+    margin: 0 0 10px 0;
+}
+
+.card-info .form-group input{
+    width: 60%;
+}
+
+.expir{
+    display: flex;
+}
+
+.card-info .form-group select{
+    width: 15%;
+    margin: 0 20px 0 0;
+}
+
+select{
+  height: 40px;
+}
+
+option{
+    padding: 5px;
+}
+
+.card-info .form-group #security-code{
+    width: 15%;
+}
+
+.card-info hr{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    width: 95%;
+}
+
+.card-info input[type=submit]{
+    width: 96%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 20px 0 0 0;
+    font-size: 20px;
+}
+
+
+@media(max-width: 960px){
+   
+
+}
+
+@media(max-width: 750px){
+    
+}
+
+@media(max-width: 500px){
+}

@@ -1,0 +1,142 @@
+
+
+
+
+.sidebar{
+    border-radius: 6px;
+    background-color: white;
+}
+
+.side-top{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border-radius: 6px;
+    background-color: white;
+}
+
+.side-top .profile-pic{
+    margin: 0 10px 0 0;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    border: black solid 1px;
+}
+
+.sidebar hr{
+    margin: 0 auto;
+    width: 90%;
+
+}
+
+
+.side-bottom{
+    padding: 20px 30px;
+}
+
+.side-bottom ul li{
+    padding: 10px;
+}
+
+.side-bottom ul li a{
+    font-family: "微軟正黑體";
+}
+
+.active{
+    color: rgb(189,80,70);
+    font-weight: bold;
+}
+
+
+/*mobile-side-bottom*/
+.toggle{
+    display: none;
+    padding: 20px 30px;
+    border-radius: 6px;
+    background-color: white;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.toggle span{
+    float: right;
+    font-size: 35px;
+}
+
+.toggle.is-opened{
+    border-radius: 6px 6px 0 0;
+}
+
+.mobile-side-bottom{
+    display: none;
+    padding: 0 30px;
+    margin: 0 0 30px 0;
+    height: 0;
+    overflow-y: hidden;
+    border-radius: 0 0 6px 6px;
+    border-top: none;
+    border-bottom: none;
+    background-color: white;
+    transition: 0.3s ease;
+}
+
+.mobile-side-bottom.is-opened{
+    padding: 0 30px;
+    height: 160px;
+}
+
+.mobile-side-bottom ul li{
+    padding: 10px;
+}
+
+
+@media (max-width: 1200px){
+    .content{
+        width: 950px;
+    }
+}
+
+@media (max-width: 1000px){
+    .content{
+        width: 700px;
+    }
+}
+
+@media (max-width: 750px){
+    .content{
+        width: 100%;
+    }
+
+    .row{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .sidebar, .main{
+        min-width: 85%;
+    }
+
+    .row .sidebar{
+        border: none;
+        background-color: transparent;
+    }
+
+    .side-top{
+        margin: 0 0 30px 0;
+        border-radius: 6px;
+    }
+
+    .side-bottom{
+        display: none;
+    }
+
+    .row .toggle{
+        display: block;
+    }
+
+    .row .mobile-side-bottom{
+        display: block;
+    }
+}

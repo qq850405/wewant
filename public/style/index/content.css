@@ -1,0 +1,256 @@
+main{
+    position: relative;
+    background-color: rgba(236,234,227, 0.5);
+}
+
+.content{
+    padding: 0 0 100px 0;
+    margin: 0 auto;
+    width: 1160px;
+}
+
+h1.title{
+    text-align: center;
+    font-size: 30px;
+    font-family: "微軟正黑體";
+}
+
+
+/*projects*/
+
+
+
+#project-newest{
+    opacity: 1;
+    
+}
+
+.project-wrappers{
+    position: relative;
+}
+
+.project-header{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 0;
+    left: 26%;
+    transform: translateY(-15%);
+}
+
+.project-category{
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10px 0 0;
+}
+
+.project-category li{
+    font-size: 17px;
+    padding: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.project-category li.active{
+    background-color: rgb(189,70,60);
+    color: white;
+}
+
+.project-search{
+    position: relative;
+    text-indent: 30px;
+    z-index: 1;
+}
+
+.project-wrapper i{
+    position: absolute;
+    transform: translateX(195px);
+    z-index: 2;
+}
+
+.project-wrapper select{
+    position: absolute;
+    top: 47px;
+    right: 10px;
+    display: none;
+}
+
+
+
+section.project-wrapper{
+    position: relative;
+    padding: 50px 0 0 0;
+    margin: 0 0 50px 0;
+}
+
+.project-wrapper hr{
+    margin-top: 0;
+    background-color: gray;
+}
+
+.project-wrapper h1{
+    display: inline-block;
+    position: relative;
+    text-align: left;
+}
+ 
+.project-wrapper h1::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    margin: 0 0 20px 0;
+    width: 2px;
+    height: 100%;
+}
+
+.projects{
+    margin-top: 30px;   
+}
+
+.project{
+    position: relative;
+    border-radius: 7px;
+    word-wrap: break-word;
+    opacity: 0;
+    background-color: white;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3), 0 2px 4px rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
+.project:hover{
+    box-shadow: 0 7px 11px rgba(0,0,0,0.3), 0 4px 6px rgba(0,0,0,0.2);
+}
+
+
+.project-img img{
+    width: 100%;
+    border-radius: 7px 7px 0 0;
+    z-index: 0;
+    transition: 0.3s ease;
+}
+
+
+.project-content{
+    padding: 10px;
+}
+
+.project-content h1{
+    font-family: '微軟正黑體';
+    font-weight: bold;
+}
+
+.project-content article{
+    margin-top: 20px;
+    font-size: 12px;
+    line-height: 20px;
+}
+
+.progress-bar{
+    margin-top: 20px;
+    text-align: center;
+    height: 15px;
+    border: black solid 1px;
+    border-radius: 4px;
+    background: linear-gradient(to right, rgb(85,164,78) 70%, white 0%);
+}
+
+.test .progress-bar{
+    background: linear-gradient(to right, rgb(85,164,78) 0%, white 0%);
+}
+
+
+.navigation .notification-toggle, .navigation .notification{
+    display: none;
+}
+
+main .notification, main .notification-toggle{
+    opacity: 0;
+}
+
+/*animation*/
+
+.animate{
+    animation: show 700ms ease forwards;
+}
+
+@keyframes show{
+    0%{
+        opacity: 0;
+        transform: scale(0);
+        
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+/*rwd*/
+
+@media(max-width: 960px){
+    .project{
+        
+    }
+}
+
+@media (max-width: 1200px) {
+
+    .content{
+        margin: 0 auto;
+        width: 960px;
+    }
+
+    .project-header{
+        left: 31%;
+    }
+}
+
+@media (max-width: 1000px) {
+
+    .content{
+        margin: 0 auto;
+        width: 710px;
+    }
+
+    .project-header{
+        left: 6%;
+    }
+}
+
+@media (max-width: 750px) {
+
+    .content{
+        margin: 0 auto;
+        width: 90%;
+    }
+
+    .project{
+        min-width: 100%;
+        margin: 10px 0;
+    }
+
+    .project-header{
+        display: none;
+    }
+
+    .project-wrapper > h1{
+        margin: 0 0 15px 0;
+    }
+
+    .project-wrapper select{
+        display: block;
+    }
+
+}
+
+@media (max-width: 520px) {
+    
+
+    
+}
+

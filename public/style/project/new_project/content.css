@@ -1,0 +1,57 @@
+main{
+    background-color: rgb(236,234,227, 0.5);
+}
+
+.home-bg{
+    position: relative;
+    height: 50vh;
+    width: 100%;
+    box-shadow:inset 0 0 0 2000px rgba(26, 26, 26, 0.5);
+    background-image: url('../../pics/IMG_5043.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    overflow: hidden;
+}
+
+
+
+
+
+@media (max-width: 1200px) {
+
+    .content{
+        margin: 0 auto;
+        width: 960px;
+    }
+}
+
+@media (max-width: 1000px) {
+
+    .content{
+        margin: 0 auto;
+        width: 710px;
+    }
+}
+
+@media (max-width: 750px) {
+
+    .content{
+        margin: 0 auto;
+        width: 90%;
+    }
+
+    .project{
+        min-width: 100%;
+    }
+
+    .project-content form input[type=submit]{
+        right: 50%;
+        transform: translateX(50%);
+        width: 100%;
+    }
+
+    .project-gift hr{
+        display: block;
+    }
+}

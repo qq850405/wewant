@@ -1,0 +1,347 @@
+main{
+    position: relative;
+    background-color: rgb(236,234,227, 0.5);
+}
+
+.content{
+    position: relative;
+    margin: 0 auto;
+    width: 1160px;
+    padding: 50px 0 50px 0;
+    transition: filter 0.3s ease;
+}
+
+header{
+    position: relative;
+    overflow: hidden;
+}
+
+.home-bg{
+    position: relative;
+    height: 600px;
+    width: 100%;
+    box-shadow:inset 0 0 0 2000px rgba(26, 26, 26, 0.7);
+    background-image: url('../../pics/IMG_4800.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    overflow: hidden;
+}
+
+.header-text{
+    position: absolute;
+    padding: 0 20px;
+    width: 100%;
+    top: 32%;
+    left: 50%;
+    transform: translate(-50%);
+    text-align: center;
+    line-height: 40px;
+    font-family: "JXC";
+    font-size: 20px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header-text div, .project-name, .author{
+    opacity: 0;
+}
+
+
+
+h1.project-name{
+    text-align: center;
+    font-family: "微軟正黑體";
+    font-size: 25px;
+}
+
+.author{
+    display: flex;
+    justify-content: center;
+    margin: 20px auto;
+}
+
+.author h1{
+    color: gray;
+}
+
+.author .author-name{
+    color: rgb(189,65,55);
+    font-weight: bold;
+}
+
+.project-upper{
+    margin: 50px 0;
+}
+
+.project-pic{
+    position: relative;
+}
+
+.project-pic img{
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+    border-radius: 5px;
+    transition: filter 0.3s ease;
+}
+
+.project-outline{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 400px;
+    text-align: center;
+    opacity: 0;
+}
+
+.project-outline div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: '微軟正黑體';
+    height: 100px;
+    opacity: 1;
+}
+
+
+
+
+
+.header-text .progress{
+    position: relative;
+    border-radius: 5px;
+    width: 600px;
+    height: 23px;
+    line-height: 16px;
+    font-size: 30px;
+    margin: 0 0 20px 0;
+    padding: 0;
+    opacity: 0;
+    background-color: lightgray;
+    z-index: -6;
+}
+
+.progress .bar{
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 5px 0 0 5px;
+    text-align: center;
+    width: 0%;
+    height: 23px;
+    margin: 0;
+    background-color: rgb(85,164,78);
+    opacity: 1;
+    transition: width 2s 1.7s ease;
+    z-index: -5;
+}
+
+.bar.start{
+    width: 0%;
+}
+
+
+.project-outline .total, .project-outline .num, .project-outline .deadline{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.header-text a{
+    width: 100px;
+    margin: 0 auto;
+    box-shadow: none;
+    border: none;
+    opacity: 0;
+}
+
+.header-text a:hover{
+    box-shadow: none;
+}
+
+
+/*project-lower*/
+
+.project-lower{
+    margin: 50px 0;
+}
+
+.project-category{
+    display: flex;
+    justify-content: space-around;
+    border-bottom: rgba(0, 0, 0, 0.5) solid 1px;
+}
+
+.project-category li{
+    padding: 20px;
+    cursor: pointer;
+}
+
+
+.project-category a{
+    border-radius: 5px 5px 0 0;
+    padding: 18px;
+}
+
+.project-category li.active{
+    color: white;
+    background-color: rgb(189,65,55);
+}
+
+.project-content{
+    margin: 0 auto 20px auto;
+}
+
+.textarea{
+    margin: 0 auto;
+}
+
+.project-content form input[type=submit]{
+    margin: 20px 0 0 0;
+    position: relative;
+    float: right;
+}
+
+.project-gift hr{
+    display: none;
+}
+
+.gift{
+    position: relative;
+    width: 90%;
+    height: 400px;
+    margin: 0 auto 30px auto;
+    border-radius: 3px;
+    background-color: white;
+    border: rgba(0, 0, 0, 0.3) solid 1px;
+    cursor: pointer;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.16), 0 1px 6px rgba(0,0,0,0.23); 
+    transition: 0.3s;
+}
+
+.gift:hover{
+    box-shadow: 0 10px 15px 0px rgba(0,0,0,0.25), 0 10px 15px 0px rgba(0,0,0,0.22);
+}
+
+.gift-pic{
+    position: relative;
+    background-image: url('../../pics/IMG_4823.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 50%;
+    width: 100%;
+}
+
+.gift-intro{
+    padding: 15px;
+}
+
+.gift-intro h1{
+    margin: 10px 2px;
+    letter-spacing: 1px;
+}
+
+.gift-intro .gift-content{
+    line-height: 20px;
+}
+
+.gift-intro div{
+    display: flex;
+    color: gray;
+    font-size: 15px;
+    position: absolute;
+    bottom: 5px; 
+}
+
+.gift-intro .gift-price{
+    margin: 0;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.gift-price{
+}
+
+input[type=submit], button, .donate_btn{
+    color: white;
+    background-color: rgb(189,65,55);
+    border-radius: 8px;
+    box-shadow: 0px 2px 3px 0px #888888;
+    transition: 0.25s;
+    border: none;
+}
+
+input[type=submit]:hover, button:hover, .donate_btn:hover{
+    color: white;
+    box-shadow: 0px 7px 8px 0px #888888;
+}
+
+
+
+
+
+@media (max-width: 1200px) {
+
+    .content{
+        margin: 0 auto;
+        width: 960px;
+    }
+}
+
+@media (max-width: 1000px) {
+
+    .content{
+        margin: 0 auto;
+        width: 710px;
+    }
+}
+
+@media (max-width: 750px) {
+
+    .content{
+        margin: 0 auto;
+        width: 90%;
+    }
+
+    .project{
+        min-width: 100%;
+    }
+
+    .project-content form input[type=submit]{
+        right: 50%;
+        transform: translateX(50%);
+        width: 100%;
+    }
+
+    .project-gift hr{
+        display: block;
+    }
+}
+@media(max-width: 750px){
+    .project-outline, .header-text .progress{
+        width: 100%;
+    }
+}
+@media(max-width: 600px){
+    .header-text{
+        top: 25%;
+    }
+    .project-category a{
+        font-size: 12px;
+        padding: 12px;
+    }
+    .project-category li{
+        padding: 14px;
+    }
+}
+@media(max-width: 400px){
+    .project-category a{
+        padding: 6px;
+    }
+    .project-category li{
+        padding: 8px;
+    }
+}

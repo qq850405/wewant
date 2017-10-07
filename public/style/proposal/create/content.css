@@ -1,0 +1,260 @@
+main{
+    position: relative;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 100%, rgba(0, 0, 0, 0.8) 0%), url("../../../pics/home3.jpeg");
+    background-size: cover;
+    background-position: top center;
+    padding: 200px 0 100px 0;
+}
+
+
+.content{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    width: 45%;
+    margin: 0 auto;
+    padding: 40px 0;
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.title{
+    text-align: center;
+    margin: 0 0 50px 0;
+    font-family: "微軟正黑體";
+    font-size: 30px;
+    letter-spacing: 1px;
+}
+
+.content .row{
+    width: 81%;
+}
+
+.content form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.form-group{
+    position: relative;
+}
+
+.form-group #label{
+    font-size: 25px;
+    color: #bdbdbd;
+}
+
+.form-group label{
+    position: absolute;
+    top: 0px;
+    left: 45px;
+    z-index: 1;
+    transition: 0.25s;
+}
+
+ .form-group input:focus + #label{
+    font-size: 15px;
+    top: 50px;
+    color: rgb(95,186,125);
+}
+
+.form-group input{
+    display: inline;
+    position: relative;
+    border: none;
+    border-bottom: rgba(0, 0, 0, 0.3) solid 7px;
+    border-radius: 0;
+    font-size: 22px;
+    background-color: transparent;
+    z-index: 2;
+    transition: 0.25s;
+}
+
+.form-group input:focus{
+    border: none;
+    box-shadow: none;
+    border-bottom: rgb(95,186,125) solid 2px;
+}
+
+form > label{
+    margin: 20px 0 30px 0;
+}
+
+.progress{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    margin: 0 auto;
+}
+
+.progress .circle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgb(255,212,196);
+}
+
+.progress .line{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 4px;
+    background-color: rgb(255,212,196);
+}
+
+.progress .active{
+    background-color: lightseagreen;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "微軟正黑體";
+}
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 0 40px 0;
+    width: 60%;
+}
+
+.form-group label{
+    margin: 0 0 10px 0;
+    font-weight: bold;
+    font-size: 17px;
+    color: rgb(101,101,101);
+}
+
+.form-group input{
+    width: 80%;
+}
+
+.form-group textarea{
+    width: 80%;
+}
+
+.form-group input[type=file]{
+    display: none;
+}
+
+.form-group .img-upload{
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    display: inline-block;
+    height: 40px;
+    padding: 10px 12px;
+    font-weight: normal;
+    background-color: rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.img-upload:hover{
+    color: white;
+    background-color: rgb(189,65,55);
+}
+
+input[type=submit], button{
+    color: white;
+    background-color: rgb(189,65,55);
+    height: 50px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 3px 0px #888888;
+    transition: 0.25s;
+}
+
+input[type=submit]:hover, button:hover{
+    color: white;
+    box-shadow: 0px 7px 8px 0px #888888;
+}
+
+select{
+    height: 50px;
+}
+
+.content form a{
+    background-color: rgb(189,65,55);
+    padding: 12px 15px;
+    border-radius: 5px;
+    color: white;
+    font-family: "微軟正黑體";
+}
+
+.ui-datepicker {   
+      font-size:62.5%; 
+}
+
+.ui-datepicker-header{
+    color: rgb(189,65,55);
+}
+
+
+@media(max-width: 960px){
+    .content{
+        width: 80%;
+    }
+
+    .progress{
+        width: 80%;
+    }
+}
+
+@media(max-width: 750px){
+    .content .form-group{
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90%;
+    }
+
+    input[type=submit], button{
+        width: 72%;
+    }
+}
+
+@media(max-width: 750px){
+    form > label{
+        margin-top: 30px;
+    }
+
+    .content .row{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .form-group{
+        width: 100%;
+    }
+
+    .form-group #label{
+        font-size: 20px;
+    }
+}
+
+
+@media(max-width: 500px){
+    .title{
+        margin: 0 20px 30px 20px;
+    }
+
+    .form-group #label{
+        top: 6px;
+        left: 22px;
+    }
+}

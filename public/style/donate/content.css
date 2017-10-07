@@ -1,0 +1,124 @@
+
+
+main{
+    background-color: rgb(243,243,241);
+    padding: 150px 0 50px 0;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    background-color: tranparent;
+    width: 1282px;
+    margin: 0 auto;
+}
+
+h1.project-name{
+    text-align: center;
+    font-family: "微軟正黑體";
+    font-size: 25px;
+}
+
+.title{
+    margin: 55px 0 30px 10px;
+    font-family: "微軟正黑體";
+    font-weight: bold;
+    color: rgb(189, 70, 60);
+}
+
+.dprices{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.dprice-group{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.dprice{
+    width: 300px;
+    height: 320px;
+    margin: 0 10px;
+    overflow: hidden;
+    border: lightgray solid 1px;
+    border-radius: 5px;
+    background-color: white;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.dprice:hover{
+    border: rgb(189, 80, 70) solid 1px;
+}
+
+.dprice.is-opened{
+    height: 520px;
+    border: rgb(189, 80, 70) solid 1px;
+}
+
+.dprice > div{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: 320px;
+    padding: 20px;
+}
+
+.dprice div img{
+    width: 200px;
+    height: 200px;
+    margin: 10px auto;
+}
+
+
+.price{
+    display: flex;
+    justify-content: center;
+    margin: 0 10px 10px 10px;
+    font-size: 35px;
+    text-align: center;
+}
+
+.feedback{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 17px;
+}
+
+.dprice form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+}
+
+.dprice input{
+    margin: 25px 0 0 0;
+}
+
+hr{
+    width: 80%;
+    margin: 0 auto 0px auto;
+}
+
+
+@media(max-width: 960px){
+   
+
+}
+
+@media(max-width: 750px){
+    
+}
+
+@media(max-width: 500px){
+}

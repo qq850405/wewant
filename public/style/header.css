@@ -1,0 +1,89 @@
+@import url('header_main.css');
+
+header{
+    height: 0;
+    overflow: visible;
+}
+
+
+.navbar{
+    color: white;
+    height: 90px;
+    background-color: rgb(245,244,241);
+    animation: 0.3s ease;
+}
+
+
+.nav-brand{
+    opacity: 1;
+}
+
+.mobile-nav-brand{
+    color: black;
+}
+
+.underline{
+    border: black solid 1px;
+}
+
+.nav-menu{
+    padding: 0 20px;
+}
+
+.nav-menu li.nav-search .icon-search-open{
+    color: black;
+}
+
+.nav-menu li{
+    padding: 20px;
+}
+
+.nav-menu li a{
+    color: black;
+}
+
+
+.nav-menu li.nav-search{
+    padding: 25px 0;
+}
+
+ul.dropdown-list{
+    top: 20px;
+}
+
+.close span, .close span::before, .close span::after{
+    background-color: black;
+}
+
+
+/*animation*/
+
+.navbar.is-shrinked{
+    height: 70px;
+}
+
+
+.nav-menu.is-shrinked{
+    padding: 10px 20px;
+}
+
+.nav-menu li.is-shrinked{
+    padding: 0 20px;
+}
+
+.nav-menu li.nav-search.is-shrinked{
+    padding: 7px 0;
+}
+
+ul.dropdown-list.is-shrinked{
+    top: 10px;
+}
+
+.close{
+    top: 2%;
+}
+
+
+
+
+

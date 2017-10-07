@@ -1,0 +1,66 @@
+
+
+.footer-nav{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    margin: 0;
+    bottom: 0;
+    background-color: rgb(199,80,70);
+    padding: 50px 0;
+    text-align: center;
+}
+
+.group{
+    position: relative;
+    transform: translateX(-20px);
+    margin: 0 50px;
+    font-family: "微軟正黑體";
+}
+
+
+.group h1{
+    text-align: left;
+    font-weight: bold;
+}
+
+.group li{
+    margin: 10px 0 0 0;
+    padding: 5px 0;
+    text-align: left;
+
+}
+
+.group a{
+    color: rgba(255, 255, 255, 0.7);
+    transition: 0.2s ease;
+}
+
+.group a:hover{
+    color: rgba(255, 255, 255, 1);
+}
+
+
+
+@media(max-width: 800px){
+    .footer-nav{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .group{
+        margin: 15px 50px;
+    }
+
+    .group h1, .group li{
+        text-align: center;
+    }
+}
+
+
+
+
+
+
+
