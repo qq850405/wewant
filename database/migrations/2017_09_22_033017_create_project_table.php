@@ -17,6 +17,8 @@ class CreateProjectTable extends Migration
         Schema::dropIfExists('project');
         Schema::create('project', function (Blueprint $table) {
             $table->increments('projectNo')->unique();
+            $table->string('projectName');
+            $table->string('category');
             $table->string('title');
             $table->string('id');
             $table->string('introduction');

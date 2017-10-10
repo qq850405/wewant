@@ -28,7 +28,7 @@
                 <h1 class = "title title4">提案人資料</h1>
                 <hr>
                 
-                {{Form::open(['action'=>'ProjectController@create','method' => 'post'])}}
+                {{Form::open(['action'=>'ProjectController@store','method' => 'post'])}}
                     <div class = "description desc1 current">
                         <h1><i class="fa fa-tag" aria-hidden="true"></i> 專案標題該怎麼取？</h1>
                         <p>一個好的標題應該要包含主題、適合族群。 像是『棒球打擊-打出自己的一片天』、『單車技巧-在逆風中前進』等都是很好的。</p>
@@ -75,14 +75,18 @@
                         <input type = "text" id = "duration" name = "duration">
                     </div>
                     <div class = "form-group">
-                        <label for = "aims">目標金額</label>
-                        <input type = "text" id = "aims" name = "aims">
+                        <label for = "goals">目標金額</label>
+                        <input type = "text" id = "goals" name = "goals">
                     </div>
                     <input type = "button" name = "2" class = "next" value = "下一步">
                 </div>
 
                 <div class = "info info2">
                     
+                    <div class = "form-group">
+                        <label for = "content">專案內容</label>
+                        <textarea name = "content" id = "content" placeholder = "請用100個字以內，簡單扼要地介紹您的專案內容。"></textarea>
+                    </div>
                     <div class = "form-group">
                         <label for = "intro">專案介紹</label>
                         <textarea name = "intro" id = "intro" placeholder = "請用100個字以內，簡單扼要地介紹您的專案內容。"></textarea>
