@@ -5,7 +5,7 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 
 use \App\project as projectEloquent;
-
+use feedbackEloquent;
 
 class project extends Model
 {
@@ -18,6 +18,7 @@ class project extends Model
         'id',
         'introduction',
         'detail',
+        'pic_path',
         'goals',
         'status',
         'begin_time',
@@ -27,11 +28,29 @@ class project extends Model
         'identity'
         ];
 
+    protected $visible =[
+        'projectNo',
+        'projectName',
+        'category',
+        'title',
+        'id',
+        'introduction',
+        'detail',
+        'pic_path',
+        'goals',
+        'status',
+        'begin_time',
+        'end_time',
+        'owner',
+        'phone',
+        'identity'
+        ];
     public function project(){
         return $this->belongsTo(project::class);       
     }
-
-
+    public function feedback(){
+        return $this->hasMany(feedback::class);
+    }
 
 
 

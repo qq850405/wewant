@@ -108,11 +108,11 @@ $(function() {
             //navbar animation
             if(scrollTop > 0){
                 if(!$('.close').hasClass('is-opened')){
-                    $('.close, .nav-menu > li > a').addClass('is-shrinked');
+                    $('.close').addClass('is-shrinked');
                 }
                 
             }else if(scrollTop == 0){
-                $('.close, .nav-menu > li > a').removeClass('is-shrinked');
+                $('.close').removeClass('is-shrinked');
             }
     });
 

@@ -8,13 +8,24 @@ use Illuminate\Support\Facades\View;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Input;
 use Session;
+use Exception;
+use \App\feedback;
 use \App\project;
 
 class ProjectController extends Controller
 {       
     
     //
+
     public function index(){
+
+        $query =project::all();
+        return view('index',compact('query'));
+
+
+
+    }
+    public function create_step1(){
 
 
         if (!Auth::check()) {
@@ -57,7 +68,7 @@ class ProjectController extends Controller
 
             return redirect('login');
         }else{
-            
+
             $projectName=(string)Session::get('projectName');
             $type=(string)Session::get('type');
             $title=$request->input('project-title');
@@ -72,14 +83,37 @@ class ProjectController extends Controller
             $status="unverified";
             $id = Auth::user()->id;
             $project = project::all();
-        
+
+
+
+
+            //upload image
+
+            $file = $request->file('pic');
+            $fileName=$_FILES["pic"]['name'];
+            $destinationPath= public_path('coverImg');
+            $new_fileName=date('Ymd').'_'.$fileName;
+
+            if (Input::hasFile('pic')) {
+            $upload_success = $file->move($destinationPath, $fileName);
+            $path = $fileName;
+            // echo "img upload success!".$path;
+            } else {
+            // echo "img upload failed!";
+            }
+            // echo $path;
+
+
+            
+
+
            $project = project::create(['projectName' => $projectName,
             'category'=>$type,
             'title'=>$title,
             'id'=>$id,
             'detail'=>$content,
+            'pic_path'=>$path,
             'introduction'=>$introduction,
-            
             'goals'=>$goals,
             'status'=>$status,
             'begin_time'=>$begin_time,
@@ -88,11 +122,67 @@ class ProjectController extends Controller
             'phone'=>$phone,
             'identity'=>$identity
             ]);
-            
+
+
+
+
+
+            $query;
+            //$query=project::find('projectNo');
+            $projectNo=project::orderBy('projectNo','DESC')->select('projectNo')->firstOrFail();
+            // $projectNo=project::find('projectNo')->orderBy('projectNo','DESC')->firstOrFail();
+            // getLatesteProject::where('projectNo')->firstOrFail();
             
 
-            //return $type+""+$title+$introduction+$goals+$begin_time+$end_time+$owner+$phone+$identity;
-            return "status=".$status." content=".$content;
+            $rewardLength=$request->input('r_num');
+            // echo "reward= ".$rewardLength;
+            $projectNo["projectNo"];
+
+            for($i=1;$i<=$rewardLength;$i++){
+                
+                $feedback_name=$request->input('reward-name'.$i);
+                $feedback_price=$request->input('reward-pirce'.$i);
+                // $feedback_icon=$request->input('reward-upload'.$i);
+
+                //upload img
+                $file = $request->file('reward-upload'.$i);
+                $fileName=$_FILES["reward-upload".$i]['name'];
+                $destinationPath= public_path('feedbackImg');
+                $new_fileName=date('Ymd').'_'.$fileName;
+
+                if (Input::hasFile('reward-upload'.$i)) {
+                $upload_success = $file->move($destinationPath, $fileName);
+                $path = $fileName;
+                // echo "feedbackimg upload success!".$path;
+                // echo $path;
+                } else {
+                // echo "feedbackimg upload failed!";
+                }
+                
+
+                
+                $feedback_description=$request->input('reward-des'.$i);
+                $feedback_sentDate=$request->input('reward-year'.$i).'/'.$request->input('reward-month'.$i);
+                $feedback_sentMethod=$request->input('reward-sent'.$i);
+                $feedback_sentPrice=$request->input('reward-price'.$i);
+                // echo $feedback_description;
+            $feedback = feedback::create([
+            'projectNo' => $projectNo['projectNo'],
+            'feedbackName'=>$feedback_name,
+            'icon'=>$path,
+            'des'=>$feedback_description,
+            'price'=>$feedback_sentPrice,
+            'sentDate'=>$feedback_sentDate,
+            'sentMethod'=>$feedback_sentMethod
+            ]);
+            return redirect('/CreateProject/success');
+
+
+
+            
+            }
+            
+ 
         }
 
 
@@ -101,7 +191,10 @@ class ProjectController extends Controller
 
 
     }
+    public function show($id){
 
+        return $id;
+    }
    
 }
  

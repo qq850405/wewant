@@ -1,8 +1,10 @@
 
 
 main{
+    display: flex;
+    align-items: center;
     background-color: rgb(243,243,241);
-    padding: 150px 0 50px 0;
+    padding: 100px 0;
 }
 
 .content{
@@ -21,6 +23,7 @@ h1.project-name{
 
 .title{
     margin: 55px 0 30px 10px;
+    text-align: center;
     font-family: "微軟正黑體";
     font-weight: bold;
     color: rgb(189, 70, 60);
@@ -28,8 +31,8 @@ h1.project-name{
 
 .dprices{
     display: flex;
-    justify-content: flex-start;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
 }
 
 .dprice-group{
@@ -42,8 +45,7 @@ h1.project-name{
 
 .dprice{
     width: 300px;
-    height: 320px;
-    margin: 0 10px;
+    margin: 5px 10px;
     overflow: hidden;
     border: lightgray solid 1px;
     border-radius: 5px;
@@ -57,7 +59,6 @@ h1.project-name{
 }
 
 .dprice.is-opened{
-    height: 520px;
     border: rgb(189, 80, 70) solid 1px;
 }
 
@@ -67,7 +68,6 @@ h1.project-name{
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    height: 320px;
     padding: 20px;
 }
 
@@ -98,6 +98,12 @@ h1.project-name{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 0px;
+    transition: 0.3s ease;
+    overflow: hidden;
+}
+
+.dprice form.is-opened{
     height: 200px;
 }
 
@@ -107,12 +113,21 @@ h1.project-name{
 
 hr{
     width: 80%;
-    margin: 0 auto 0px auto;
+    margin: 0 auto;
+    display: none;
 }
 
+hr.is-opened{
+    display: block;
+}
+
+@media(max-width: 1242px){
+    .content{
+        width: 940px;
+    }
+}
 
 @media(max-width: 960px){
-   
 
 }
 

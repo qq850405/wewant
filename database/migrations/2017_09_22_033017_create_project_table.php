@@ -22,7 +22,8 @@ class CreateProjectTable extends Migration
             $table->string('title');
             $table->string('id');
             $table->string('introduction');
-            $table->string('content');
+            $table->string('detail');
+            $table->string('pic_path');
             $table->integer('goals');
             $table->string('status');
             $table->string('begin_time');

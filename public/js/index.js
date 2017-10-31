@@ -1,9 +1,10 @@
 $(function (){
         $(window).scrollTop(0);
+        
 
         //slogan
-        $('.slogan > h1').fadeIn(1500).next().next().delay(1000).fadeIn(1500);
-        $('.home-btn').delay(1000).fadeIn(750);
+        $('.slogan h1:nth-child(1)').delay(500).fadeIn(2000).next().next().delay(2000).fadeIn(1500);
+        //$('.home-btn').delay(1000).fadeIn(750);
         
         
 
@@ -21,13 +22,15 @@ $(function (){
             if(scrollTop > 0){
                 $('.navbar').addClass('white is-shrinked');
                 $('.underline').addClass('black-underline');
-                $('.nav-menu, .nav-menu > li, li.nav-search, .dropdown-list, .nav-search > .icon-search-open').addClass('is-shrinked');
-                $('main .notification, main .notification-toggle').css({'opacity': '1'});
+                $('.nav-menu, .nav-menu > li, .nav-menu > li > a, li.nav-search, .dropdown-list, .nav-search > .icon-search-open').addClass('is-shrinked');
+                $('.navigation .notification, .navigation .notification-toggle').css({'opacity': '1', 'cursor': 'pointer'});
+                
             }else if(scrollTop == 0){
                 $('.navbar').removeClass('white is-shrinked');
                 $('.underline').removeClass('black-underline');
-                $('.nav-menu, .nav-menu > li, li.nav-search, .dropdown-list, .nav-search > .icon-search-open').removeClass('is-shrinked');
-                $('main .notification, main .notification-toggle').css({'opacity': '0'});
+                $('.nav-menu, .nav-menu > li, .nav-menu > li > a, .nav-menu > li > a, li.nav-search, .dropdown-list, .nav-search > .icon-search-open').removeClass('is-shrinked');
+                $('.navigation .notification, .navigation .notification-toggle').css({'opacity': '0', 'cursor': 'auto'});
+                
             }
             
             if(scrollTop >= content-100){
@@ -60,7 +63,7 @@ $(function (){
             $(this).addClass('active');
             var sports = $(this).attr('id');
             //alert(sports);
-           /* $.ajax({
+            $.ajax({
                 type: 'GET',
                 url: '',
                 data: {
@@ -69,7 +72,7 @@ $(function (){
                 success: function(data){
                     $('.projects').html(data);
                 }
-            });*/
+            });
         });
 
         $('#project-newest .project-category li').on('click', function() {
@@ -77,7 +80,7 @@ $(function (){
             $(this).addClass('active');
             var sports = $(this).attr('id');
             //alert(sports);
-          /*  $.ajax({
+            $.ajax({
                 type: 'GET',
                 url: '',
                 data: {
@@ -86,7 +89,7 @@ $(function (){
                 success: function(data){
                     $('.projects').html(data);
                 }
-            });*/
+            });
         });
 
 

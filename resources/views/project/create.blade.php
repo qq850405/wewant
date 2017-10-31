@@ -13,7 +13,7 @@
             <div class = "content">
                 <h1 class = "title">創建一個新計畫!</h1>
 
-                {{Form::open(['action'=>'ProjectController@create','method' => 'post'])}}
+                {{Form::open(['action'=>'ProjectController@create','method' => 'post' ])}}
                 <!--<form method = "POST" action = "{{action('ProjectController@create')}}">-->
                     <div class = "row">
                         <div class = "form-group eight columns">

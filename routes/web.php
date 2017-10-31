@@ -11,14 +11,19 @@
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/', 'ProjectController@index');
 
 
-Route::get('/CreateProject','ProjectController@index');
+Route::get('/CreateProject','ProjectController@create_step1');
 Route::resource('project', 'ProjectController');
 Route::post('/CreateProject/create','ProjectController@create');
+Route::get('/CreateProject/success',function(){
+
+    return view('project.success');
+});
+
+Route::get('/project/{id}/show','ProjectController@show');
+
 
 Route::get('/login', function(){
 
@@ -37,6 +42,5 @@ Route::get('/home', 'HomeController@index')->name('home');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-
 
 

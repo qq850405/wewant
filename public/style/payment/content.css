@@ -1,8 +1,11 @@
 
 
 main{
+    display: flex;
+    align-items: center;
+    height: 130vh;
     background-color: rgb(243,243,241);
-    padding: 150px 0 50px 0;
+    padding: 100px 0 0 0;
 }
 
 .content{
@@ -34,21 +37,28 @@ h1.project-name{
 }
 
 .payment-method-toggle{
-    float: left;
+    position: relative;
     border: black solid 1px;
     border-radius: 5px;
-    width: 10%;
+    width: 130px;
     text-align: center;
-    padding: 8px 0;
-    margin: 40px 0 0 0;
+    padding: 8px;
+    margin: 20px 0 0 0;
     transition: 0.3s ease;
     cursor: pointer;
+    z-index: 40;
+}
+
+.payment-method-toggle span{
+    margin: 0 5px 0 0;
 }
 
 .payment-method-toggle .fa-caret-down{
-    position: relative;
-    top: 15%;
+    position: absolute;
+    top: 17%;
+    right: 5%;
     font-size: 25px;
+    z-index: 50;
 }
 
 .payment-method-toggle.is-opened{
@@ -57,19 +67,28 @@ h1.project-name{
 
 
 .payment-method{
+    position: absolute;
+    top: 100%;
+    left: 0;
     height: 0px;
     overflow: hidden;
     text-align: center;
     border: black solid 0px;
     border-radius: 0 0 5px 5px;
-    width: 10%;
-    transition: 0.3s ease;
+    background-color: rgb(243,243,241);
+    width: 100%;
+    transition: 0.2s ease;
+    z-index: 50;
     cursor: pointer;
 }
 
 .payment-method li{
     padding: 10px 0;
     border-bottom: black solid 1px;
+}
+
+.payment-method li:hover{
+    background-color: rgb(223,223,221);
 }
 
 .payment-method li:last-child{
@@ -88,24 +107,33 @@ h1.project-name{
     padding: 0 0 0 0;
 }
 
+.payment-wrapper .separate-line{
+    height: 100%;
+    width: 1px;
+    margin: 0 20px;
+    background-color: gray;
+}
+
 .payment-description{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     width: 30%;
     font-family: "微軟正黑體";
-    border-left: gray solid 1px;
 }
 
 .payment-detail{
-    padding: 10px 0 30px 30px;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0 0 30px 0;
 }
 
 .payment-detail hr{
     margin: 20px 0 10px 0;
 }
 
-.payment-detail > .pay-content{
+.payment-detail  .pay-content{
     font-weight: bold;
     margin: 10px 0 0 10px;
     font-size: 20px;
@@ -117,7 +145,7 @@ h1.project-name{
 }
 
 .website-description{
-    padding: 30px 0 50px 30px;
+    padding: 0;
     line-height: 25px;
 }
 
@@ -134,7 +162,7 @@ h1.project-name{
 
 .payment-info{
     font-family: "微軟正黑體";
-    margin: 0 30px 30px 0;
+    margin: 0 0 30px 0;
 }
 
 .payment-info h1{
@@ -157,7 +185,6 @@ h1.project-name{
 .card-info h1{
     font-weight: bold;
     font-size: 20px;
-    margin-bottom: 20px;
 }
 
 .card-info .form-group{
@@ -182,6 +209,7 @@ h1.project-name{
 .card-info .form-group select{
     width: 15%;
     margin: 0 20px 0 0;
+    cursor: pointer;
 }
 
 select{
@@ -214,14 +242,83 @@ option{
 }
 
 
-@media(max-width: 960px){
-   
+@media(max-width: 1050px){
+    .content{
+        width: 720px;
+    }
 
+    main{
+        height: 150vh;
+    }
 }
 
 @media(max-width: 750px){
-    
+    .content{
+       width: 450px;
+   }
+
+   main{
+       height: 180vh;
+       padding: 0;
+   }
+
+   .payment-wrapper{
+       flex-direction: column;
+       align-items: center;
+   }
+
+   .website-description{
+       display: none;
+   }
+
+   .card-info .form-group label{
+        text-align: center;
+    }
+
+    .card-info .form-group input{
+        margin: 0 auto;
+    }
+
+    .expir{
+        justify-content: center;
+    }
+
+    .card-info .form-group select{
+        width: 30%;
+    }
+
+    .card-info .form-group #security-code{
+        width: 30%;
+    }
+
+    .payment-description{
+        order: 1;
+        width: 100%;
+    }
+
+    .payment-form{
+        order: 2;
+    }
+
+    .payment-detail{
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 20px;
+        width: 100%;
+        border-bottom: lightgray solid 1px;
+    }
+
+    .payment-detail div{
+        text-align: center;
+    }
+
+    .payment-detail .pay-content{
+        margin: 5px 0 0 0;
+    }
+
+
 }
 
 @media(max-width: 500px){
+
 }

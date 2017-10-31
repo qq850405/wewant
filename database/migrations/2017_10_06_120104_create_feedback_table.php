@@ -18,9 +18,10 @@ class CreateFeedbackTable extends Migration
         Schema::create('feedback', function (Blueprint $table) {
             $table->increments('feedbackNo');
             $table->string('projectNo');
+            $table->string('feedbackName');
             $table->string('icon');
-            $table->string('description');
-            $table->string('money');
+            $table->string('des');
+            $table->string('price');
             $table->string('sentDate');
             $table->string('sentMethod');
             $table->string('upperLimit');

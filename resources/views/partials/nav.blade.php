@@ -52,7 +52,7 @@
         </ul>
     </nav>
     <nav class = "navbar" aria-label = "desktop-nav">
-        <a href = "{{ URL::to('/')}}" class = "nav-brand"><img src = "pics/wewantfinal.png"></a>
+        <a href = "{{ URL::to('/')}}" class = "nav-brand"><img src = "/pics/wewantfinal.png"></a>
         
         <ul class = "nav-menu">
             <li class = "nav-search">

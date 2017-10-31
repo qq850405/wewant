@@ -1,4 +1,4 @@
-  main{
+main{
     position: relative;
     background-color: rgb(236,234,227, 0.5);
     background-attachment: fixed;
@@ -19,6 +19,7 @@
     font-size: 0px;
     border: lightgray solid 1px;
     border-radius: 5px;
+    transition: 0.3 ease;
 }
 
 
@@ -44,6 +45,7 @@
 
 
 .progress{
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -91,6 +93,19 @@
 .title-active{
     opacity: 1;
     transform: translateX(-50%);
+}
+
+.info3-btn{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    padding: 3px 7px;
+    font-size: 30px;
+    text-align: center;
+    background-color: rgb(85,164,78);
+    border-radius: 5px;
+    cursor: pointer;
+
 }
 
 
@@ -148,6 +163,114 @@
 .current{
     opacity: 1;
     z-index: 1;
+}
+
+.reward-table-wrapper{
+    position: relative;
+    width: 85%;
+}
+
+.reward-table{
+    position: relative;
+    width: 100%;
+}
+
+.reward-table h1{
+    font-size: 18px;
+    font-weight: bold;
+    margin: 20px 0 10px 0;
+}
+
+.reward-table .table-delete{
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+}
+
+.table-delete:hover{
+    font-weight: bold;
+}
+
+table{
+    width: 100%;
+    margin: 0 0 40px 0;
+}
+
+table tr{
+    position: relative;
+}
+
+table td{
+    border: none;
+}
+
+table td.table-title, table td.table-file{
+    vertical-align: top;
+    border: lightgray solid 1px;
+}
+
+table td.table-file{
+    padding: 5px;
+}
+
+table td input, table td textarea{
+    width: 100%;
+    border-radius: 0 !important;
+    margin: 0;
+    border: lightgray solid 1px !important;
+    z-index: 2;
+}
+
+table td input[type=file]{
+    display: none;
+}
+
+table td .img-upload{
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: inline-block;
+    height: 40px;
+    padding: 10px 12px;
+    font-weight: normal;
+    background-color: rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+table td textarea{
+    height: 100%;
+    resize: none;
+}
+
+table .table-title{
+    width: 30%;
+    padding: 10px;
+
+}
+
+table .table-select{
+    display: flex;
+}
+
+.table-select select{
+    width: 100%;
+    margin: 0 !important;
+    border-radius: 0;
+    border: lightgray solid 1px;
+}
+
+.add-btn{
+    width: 85%;
+    text-align: center;
+    padding: 30px 0;
+    margin: 0 0 40px 0;
+    border: black dotted 1px;
+    cursor: pointer;
+}
+
+.add-btn:hover{
+    background-color: rgba(0, 0, 0, 0.1);
 }
 
 .form-group{
@@ -262,6 +385,452 @@ input[type=submit]:hover, button:hover, input[type=button]:hover{
     }
 }
 
+
+#mceu_11 button{
+    box-shadow: none;
+}
+
+/*preview*/
+
+.preview-btn{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 80px;
+    border: black solid 1px;
+    cursor: pointer;
+}
+
+.preview-btn i{
+    margin: 0 5px 0 0;
+}
+
+.preview{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    border: lightgray solid 1px;
+    opacity: 0;
+    display: none;
+}
+
+.preview.is-opened{
+    display: block;
+    opacity: 1;
+}
+
+.content.is-closed{
+    display: none;
+    opacity: 0;
+}
+
+.preview-project-bg{
+    position: relative;
+    height: 600px;
+    width: 100%;
+    box-shadow:inset 0 0 0 2000px rgba(26, 26, 26, 0.5);
+    background-image: url('../../pics/IMG_4800.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    overflow: hidden;
+}
+
+.header-text{
+    position: absolute;
+    padding: 0 20px;
+    width: 100%;
+    top: 32%;
+    left: 50%;
+    transform: translate(-50%);
+    text-align: center;
+    line-height: 40px;
+    font-family: "JXC";
+    font-size: 20px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header-text div, .project-name, .author{
+    opacity: 1;
+}
+
+h1.project-name{
+    text-align: center;
+    font-family: "微軟正黑體";
+    font-size: 25px;
+}
+
+.author{
+    display: flex;
+    justify-content: center;
+    margin: 20px auto;
+}
+
+.author h1{
+    color: gray;
+}
+
+.author .author-name{
+    color: rgb(189,65,55);
+    font-weight: bold;
+}
+
+.project-upper{
+    margin: 50px 0;
+}
+
+.project-pic{
+    position: relative;
+}
+
+.project-pic img{
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+    border-radius: 5px;
+    transition: filter 0.3s ease;
+}
+
+.project-outline{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 500px;
+    text-align: center;
+}
+
+.project-outline div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: '微軟正黑體';
+    width: 150px;
+    height: 100px;
+    opacity: 1;
+}
+
+.header-text .progress{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: 5px;
+    width: 600px;
+    height: 23px;
+    line-height: 16px;
+    font-size: 23px;
+    margin: 0 0 20px 0;
+    padding: 0;
+    opacity: 1;
+    background-color: lightgray;
+    z-index: -6;
+}
+
+.progress .bar{
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 5px 0 0 5px;
+    text-align: center;
+    width: 0%;
+    height: 23px;
+    margin: 0;
+    background-color: rgb(85,164,78);
+    opacity: 1;
+    transition: width 2s 1.7s ease;
+    z-index: -5;
+}
+
+.bar.start{
+    width: 70%;
+}
+
+
+.project-outline .total, .project-outline .num, .project-outline .deadline{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.header-text a{
+    width: 100px;
+    margin: 0 auto;
+    font-family: "微軟正黑體";
+    box-shadow: none;
+    border: none;
+    border-radius: 5px;
+    opacity: 1;
+}
+
+.header-text a:hover{
+    box-shadow: none;
+}
+
+
+/*project-lower*/
+
+.project-lower{
+    position: relative;
+    width: 80%;
+    margin: 50px auto;
+}
+
+.project-category{
+    position: relative;
+    width: 1160px;
+    margin: 50px auto;
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(245,244,241);
+    box-shadow: 0px 1px 1px 0px lightgray;
+    border: lightgray solid 1px;
+    z-index: 50;
+    transition: box-shadow 0.3s ease;
+}
+
+.active-box{
+    display: hidden;
+    position: absolute;
+    top: 0;
+    height: 2px;
+    background-color: rgb(189,65,55);
+    z-index: 1;
+    transition: 400ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+
+.project-category li{
+    padding: 20px;
+    cursor: pointer;
+    background-color: transparent;
+    color: gray;
+    z-index: 2;
+    transition: color 0.4s ease;
+}
+
+.project-category li.active{
+    color: black;
+}
+
+.project-gift{
+    position: relative;
+}
+
+.project-gift hr{
+    display: none;
+}
+
+.gift{
+    position: relative;
+    width: 300px;
+    margin: 0 0 20px 0;
+    border-radius: 3px;
+    background-color: white;
+    border: rgba(0, 0, 0, 0.3) solid 1px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.gift:not(:hover) .gift-des{
+    margin: 0;
+    font-size: 0;
+    opacity: 0;
+    transition: margin 0.2s 0.2s ease, font-size 0.2s 0.2s ease, opacity 0.2s ease;
+}
+
+.gift:hover .gift-des{
+    transition: margin 0.2s ease, font-size 0.2s ease, opacity 0.2s 0.2s ease;
+}
+
+.reward-cover{
+    position: relative;
+    width: 80%;
+    margin: 10px auto 25px auto;
+    z-index: 2;
+}
+
+.gift-intro{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    
+}
+
+.gift-intro h1{
+    letter-spacing: 1px;
+}
+
+.gift-intro .gift-time{
+    display: flex;
+    margin: 10px 0 0 0;
+    color: gray;
+    font-size: 15px;
+}
+
+.gift-intro .gift-name{
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 0 10px 0;
+}
+
+.gift-intro .gift-des{
+    color: rgba(0, 0, 0, 0.8);
+    margin: 0 0 20px 0;
+    font-size: 15px;
+    opacity: 1;
+    overflow: hidden;
+}
+
+.gift-intro .gift-price{
+    font-size: 28px;
+    font-weight: bold;
+}
+
+
+input[type=submit], button, .donate_btn{
+    color: white;
+    background-color: rgb(189,65,55);
+    border-radius: 8px;
+    box-shadow: 0px 2px 3px 0px #888888;
+    transition: 0.25s;
+    border: none;
+}
+
+input[type=submit]:hover, button:hover, .donate_btn:hover{
+    color: white;
+    box-shadow: 0px 7px 8px 0px #888888;
+}
+
+
+
+
+
+@media (max-width: 1200px) {
+
+    .content{
+        margin: 0 auto;
+        width: 960px;
+    }
+
+    .project-category{
+        width: 960px;
+    }
+}
+
+@media (max-width: 1000px) {
+
+    .content{
+        margin: 0 auto;
+        width: 710px;
+    }
+
+    .project-category{
+        width: 710px;
+    }
+
+    .gift{
+        height: 320px;
+    }
+
+    .gift-intro .gift-price{
+        font-size: 25px;
+    }
+
+    .gift-intro .gift-content{
+        font-size: 12px;
+        line-height: 20px;
+    }
+
+    .gift-intro .gift-time{
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 750px) {
+
+    .content{
+        margin: 0 auto;
+        width: 90%;
+    }
+
+    .project-outline, .header-text .progress{
+        width: 100%;
+    }
+
+    .project-category{
+        width: 90%;
+    }
+
+    .project{
+        min-width: 100%;
+    }
+
+    .project-content form input[type=submit]{
+        right: 50%;
+        transform: translateX(50%);
+        width: 100%;
+    }
+
+    .project-gift hr{
+        display: block;
+    }
+
+    .gift{
+        position: relative !important;
+        top: 0 !important;
+        width: 70%;
+        margin: 0 auto !important;
+    }
+}
+
+@media(max-width: 600px){
+    .header-text{
+        top: 25%;
+    }
+    
+    .project-category{
+        width: 100%;
+        left: 0;
+    }
+
+    .project-category a{
+        font-size: 12px;
+        padding: 12px;
+    }
+
+    .project-category li{
+        padding: 14px;
+    }
+}
+@media(max-width: 400px){
+    
+
+    .project-category a{
+        padding: 6px;
+    }
+
+    .project-category li{
+        padding: 20px 5px;
+    }
+}
+
+.close.is-shrinked span, .close.is-shrinked span::before, .close.is-shrinked span::after{
+    background-color: white;
+}
+
+.close.is-shrinked{
+    top: 15px;
+}
+
 @media(max-width: 750px){
    .content{
        width: 450px;
@@ -284,7 +853,26 @@ input[type=submit]:hover, button:hover, input[type=button]:hover{
 
 @media(max-width: 500px){
     .content{
+        width: 350px;
+    }
+}
+
+@media(max-width: 400px){
+    .content{
         width: 90%;
     }
 
+}
+
+.fr-box{
+    position: absolute;
+    width: 100%;
+}
+
+.fr-box button{
+    box-shadow: none;
+}
+
+.fr-wrapper{
+    width: 100%;
 }

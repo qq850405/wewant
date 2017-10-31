@@ -1,7 +1,7 @@
 $(function() {
     $(window).scroll(function() {
         var scrollTop = $(this).scrollTop();
-        var footer = $('footer').offset();
+        var footer = $('footer').offset().top;
 
         if(scrollTop > (footer-650)){
             $('.group').each(function(i) {
