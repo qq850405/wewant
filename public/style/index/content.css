@@ -166,7 +166,7 @@ section.project-wrapper{
     height: 15px;
     border: black solid 1px;
     border-radius: 4px;
-    /*background: linear-gradient(to right, rgb(85,164,78) 70%, white 0%);*/
+    background: linear-gradient(to right, rgb(85,164,78) 70%, white 0%);
 }
 
 .test .progress-bar{

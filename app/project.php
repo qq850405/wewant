@@ -45,11 +45,8 @@ class project extends Model
         'phone',
         'identity'
         ];
-    public function project(){
-        return $this->belongsTo(project::class);       
-    }
     public function feedback(){
-        return $this->hasMany(feedback::class);
+        return $this->hasMany('feedback');
     }
 
 

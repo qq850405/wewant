@@ -23,7 +23,17 @@ class feedback extends Model
         'sentMethod'
         //'upperLimit'
         ];
-
+    
+    protected $visible =[
+        'projectNo',
+        'feedbackName',
+        'icon',
+        'des',
+        'price',
+        'sentDate',
+        'sentMethod'
+        //'upperLimit'
+        ];
     public function project(){
         return $this->belongTo(projectEloquent::class);
     }

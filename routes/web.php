@@ -18,13 +18,12 @@ Route::get('/CreateProject','ProjectController@create_step1');
 Route::resource('project', 'ProjectController');
 Route::post('/CreateProject/create','ProjectController@create');
 Route::get('/CreateProject/success',function(){
-
     return view('project.success');
 });
 
 Route::get('/project/{id}/show','ProjectController@show');
-
-
+Route::get('/project/{id}/{item}','ProjectController@show_ajax');
+Route::get('/project_filter/{category}','ProjectController@category_resault');
 Route::get('/login', function(){
 
     return view('member.login');

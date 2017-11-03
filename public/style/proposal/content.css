@@ -49,8 +49,14 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 40%;
+    width: 600px;
     margin: 40px auto;
+}
+
+.progress .circles{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .progress .circle{
@@ -375,13 +381,28 @@ input[type=submit]:hover, button:hover, input[type=button]:hover{
         width: 700px;
     }
 
-    .progress{
-        width: 80%;
-    }
-
     .info input[type=button], .info input[type=submit]{
         position: relative;
         right: 15px;
+    }
+}
+
+@media(max-width: 700px){
+    .progress{
+        flex-direction: column;
+        width: 80%;
+    }
+
+    .progress .circles{
+        margin: 0 0 0 0;
+        order: 2;
+        width: 100%;
+    }
+
+    .preview-btn{
+        position: relative !important;
+        height: 50px !important;
+        order: 1;
     }
 }
 
@@ -714,13 +735,19 @@ input[type=submit]:hover, button:hover, .donate_btn:hover{
 
 
 
-@media (max-width: 1200px) {
+@media (max-width: 1300px) {
 
     .content{
         margin: 0 auto;
         width: 960px;
     }
 
+    .project-category{
+        width: 960px;
+    }
+}
+
+@media (max-width: 1200px) {
     .project-category{
         width: 960px;
     }
@@ -735,10 +762,6 @@ input[type=submit]:hover, button:hover, .donate_btn:hover{
 
     .project-category{
         width: 710px;
-    }
-
-    .gift{
-        height: 320px;
     }
 
     .gift-intro .gift-price{
@@ -757,10 +780,6 @@ input[type=submit]:hover, button:hover, .donate_btn:hover{
 
 @media (max-width: 750px) {
 
-    .content{
-        margin: 0 auto;
-        width: 90%;
-    }
 
     .project-outline, .header-text .progress{
         width: 100%;

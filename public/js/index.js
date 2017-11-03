@@ -6,11 +6,7 @@ $(function (){
         $('.slogan h1:nth-child(1)').delay(500).fadeIn(2000).next().next().delay(2000).fadeIn(1500);
         //$('.home-btn').delay(1000).fadeIn(750);
         
-        
-
-        
-
-        
+    
     
         $(window).scroll(function() {
             
@@ -57,40 +53,24 @@ $(function (){
         });
 
 
-        /*projects*/
-        $('#project-popular .project-category li').on('click', function() {
-            $('#project-popular .project-category li').removeClass('active');
-            $(this).addClass('active');
-            var sports = $(this).attr('id');
-            //alert(sports);
-            $.ajax({
-                type: 'GET',
-                url: '',
-                data: {
-                  'category': 'sports'  
-                },
-                success: function(data){
-                    $('.projects').html(data);
-                }
-            });
-        });
+        // /*projects*/
+        // $('#project-popular .project-category li').on('click', function() {
+        //     $('#project-popular .project-category li').removeClass('active');
+        //     $(this).addClass('active');
+        //     var sports = $(this).attr('id');
+        //     //alert(sports);
+        //     $.ajax({
+        //         type: 'GET',
+        //         url: '',
+        //         data: {
+        //           'category': 'sports'  
+        //         },
+        //         success: function(data){
+        //             $('.projects').html(data);
+        //         }
+        //     });
+        // });
 
-        $('#project-newest .project-category li').on('click', function() {
-            $('#project-newest .project-category li').removeClass('active');
-            $(this).addClass('active');
-            var sports = $(this).attr('id');
-            //alert(sports);
-            $.ajax({
-                type: 'GET',
-                url: '',
-                data: {
-                  'category': 'sports'  
-                },
-                success: function(data){
-                    $('.projects').html(data);
-                }
-            });
-        });
 
 
     });

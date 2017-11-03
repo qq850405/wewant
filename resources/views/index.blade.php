@@ -28,10 +28,10 @@
                     <div class = "project-header">
                         <ul class = "project-category">
                             <li id = "ball" class = "active">球類運動</li>
-                            <li id = "martial-arts">技擊運動</li>
-                            <li id = "track-and-field">田徑運動</li>
+                            <li id = "MartialArts">技擊運動</li>
+                            <li id = "TrackAndField">田徑運動</li>
                             <li id = "Fitness">健體運動</li>
-                            <li id = "bike">單車類</li>
+                            <li id = "bicycle">單車類</li>
                             <li id = "others">其他</li>
                         </ul>
                         <div class = "project-search">
@@ -42,14 +42,15 @@
                     <div class = "mobile-project-header">
                         <select>
                             <option value = "ball">球類運動</option>
-                            <option value = "martial-arts">技擊運動</option>
-                            <option value = "track-and-field">田徑運動</option>
+                            <option value = "MartialArts">技擊運動</option>
+                            <option value = "TrackAndField">田徑運動</option>
                             <option value = "Fitness">健體運動</option>
                             <option value = "bike">單車類</option>
                             <option value = "others">其他</option>
                         </select>
                     </div>
                     <hr>
+                    <div class = "pp">
                     @php
                     $count=1
                     @endphp
@@ -80,6 +81,7 @@
                     $count++
                     @endphp
                     @endforeach
+                    </div>
                 </section>
 
                 <section id = "project-newest" class = "project-wrapper">
@@ -87,10 +89,10 @@
                     <div class = "project-header">
                         <ul class = "project-category">
                             <li id = "ball" class = "active">球類運動</li>
-                            <li id = "martial-arts">技擊運動</li>
-                            <li id = "track-and-field">田徑運動</li>
+                            <li id = "MartialArts">技擊運動</li>
+                            <li id = "TrackAndField">田徑運動</li>
                             <li id = "Fitness">健體運動</li>
-                            <li id = "bike">單車類</li>
+                            <li id = "bicycle">單車類</li>
                             <li id = "others">其他</li>
                         </ul>
                         <div class = "project-search">
@@ -101,8 +103,8 @@
                     <div class = "mobile-project-header">
                         <select>
                             <option value = "ball">球類運動</option>
-                            <option value = "martial-arts">技擊運動</option>
-                            <option value = "track-and-field">田徑運動</option>
+                            <option value = "MartialArts">技擊運動</option>
+                            <option value = "TrackAndField">田徑運動</option>
                             <option value = "Fitness">健體運動</option>
                             <option value = "bike">單車類</option>
                             <option value = "others">其他</option>
@@ -133,9 +135,33 @@
 
             
         </main>
-.progress-bar {
-background: linear-gradient(to right, rgb(85,164,78) 70%, white 0%);
-}
+
+        <script>
+        
+        $('#project-popular .project-category li').on('click', function() {
+            // alert('123');
+            $('#project-popular .project-category li').removeClass('active');
+            $(this).addClass('active');
+            var sports = $(this).attr('id');
+            var href = 'project_filter/'+sports;
+            //alert(href);
+            //alert(sports);
+             $.ajax({
+                url : href,
+                type : 'GET',
+                success: function(data){
+                    
+                    var t = $(data).html();
+                    $('.project').html(t);
+                },
+
+                error: function(jqXHR, textStatus, errorThrown) {
+                alert(textStatus);
+            }
+            });
+        });
+    </script>
+
 @stop
 
 

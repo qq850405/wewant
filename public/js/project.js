@@ -125,24 +125,25 @@ $(function() {
 });
 
 //project-content
-function getData(obj){
-    $('.project-content').animate({
-        'opacity': '0'
-    }, 300, function() {
-        var name = obj.id;
-        var href = "project_"+name+".html";
-        //alert(a);
-        $.ajax({
-            url : href,
-            type : 'GET',
-            success: function(data){
-                var t = $(data).find('.project-info').html();
-                $('#content').html(t);
-            }
-        });
-    });
-    $('.project-content').animate({
-        'opacity': '1'
-    }, 300);
-}
+// function getData(obj){
+//     $('.project-content').animate({
+//         'opacity': '0'
+//     }, 300, function() {
+//         var name = obj.id;
+//         var href = "/project."+name+"'";
+//         // var href = "{{url('/project."+name+"')}}";
+//         //alert(a);
+//         $.ajax({
+//             url : href,
+//             type : 'GET',
+//             success: function(data){
+//                 var t = $(data).find('.project-info').html();
+//                 $('#content').html(t);
+//             }
+//         });
+//     });
+//     $('.project-content').animate({
+//         'opacity': '1'
+//     }, 300);
+// }
 

@@ -47,13 +47,20 @@ header{
     color: black;
 }
 
-
 .nav-menu li.nav-search{
     padding: 25px 0;
 }
 
+.mobile-nav-menu{
+    transform: translateY(-45px);
+}
+
 ul.dropdown-list{
     top: 20px;
+}
+
+.close{
+    position: relative;
 }
 
 .close span, .close span::before, .close span::after{
@@ -85,7 +92,7 @@ ul.dropdown-list.is-shrinked{
 }
 
 .close{
-    top: 2%;
+    top: 15px;
 }
 
 

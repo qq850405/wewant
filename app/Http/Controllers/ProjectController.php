@@ -193,8 +193,24 @@ class ProjectController extends Controller
     }
     public function show($id){
 
-        return $id;
+        
+        $query = project::where('projectNo',$id)->get();
+        //$query=project::orderBy('projectNo','DESC')->firstOrFail();
+        return view('project.project',compact('query'));
+        
     }
-   
+    public function show_ajax($id,$item){
+        $query = project::where('projectNo',$id)->get();
+        //$name=array('測試啦幹');
+        return View::make('project.'.$item, compact('query')) ;
+
+    }
+
+    public function category_resault($category){
+
+        $query = project::where('category',$category)->get();
+          return $query;
+        // return View::make('project_filter',compact('query'));
+    }
 }
  

@@ -31,12 +31,11 @@
     }
 
     .navbar{
+        position: absolute;
         box-sizing: content-box;
-        position: fixed;
         top: 0;
         width: 100%;
         height: 120px;
-        z-index: 100;
         color: white;
         background-color: rgba(255, 255, 255, 0);
         transition: 0.3s ease;
@@ -46,7 +45,7 @@
     .nav-brand{
         display: block;
         position: absolute;
-        top: 5%;
+        top: 0%;
         left: 1%;
         width: 10%;
         font-size: 30px;
@@ -165,12 +164,12 @@
     }
 
     ul.dropdown-list2::before{
-        top: -17.5%;
+        top: -24px;
         left: 61%;
     }
 
     ul.dropdown-list2::after{
-        top: -15%;
+        top: -21px;
         left: 62%;
     }
 
@@ -192,14 +191,11 @@
         padding: 25px 0 22px 0;
     }
 
-    .fa-search{
-        font-size: 23px;
-    }
-
     .nav-menu li.nav-search .icon-search{
         color: black;
         position: relative;
         left: -35px;
+        font-size: 30px;
         opacity: 0;
         z-index: -100;
         transition: 0.3s ease;
@@ -208,6 +204,7 @@
     .nav-menu li.nav-search .icon-search-open{
         position: relative;
         color: white;
+        font-size: 23px;
         opacity: 1;
         transition: 0.2s ease;
     }
@@ -321,13 +318,13 @@
     /*mobile-nav*/
     .mobile-nav{
         position: fixed;
-        top: -100%;
+        top: -100vh;
         left: 0;
         height: 100vh;
         width: 100%;
         background-color: rgb(245,244,241);
         display: none; 
-        transition: 0.5s ease;
+        transition: top 0.5s ease;
         z-index: 150;
     }
 
@@ -335,6 +332,7 @@
         position: relative;
         display: flex;
         flex-direction: column;
+        align-items: center;
         width: 100%;
         margin: 0 auto;
     }
@@ -350,9 +348,10 @@
     }
 
     .mobile-nav li{
+        width: 100%;
         text-align: center;
         color: black;
-        padding: 25px 0;
+        padding: 20px 0;
     }
 
     .mobile-nav-menu li.nav-search{
@@ -371,8 +370,8 @@
 
     .mobile-nav-menu li.nav-search .icon-search{
         position: absolute;
-        top: 50%;
-        left: 81%;
+        top: 60%;
+        left: 86%;
         opacity: 0;
         font-size: 22px;
         z-index: -100;
@@ -448,6 +447,10 @@
         top: 15%;
         overflow: hidden;
         transition: height 0.3s ease;
+    }
+
+    .mobile-dropdown-list li{
+        padding: 15px 0;
     }
 
 
@@ -549,6 +552,24 @@
         transition: 0.3s ease;   
     }
 
+    .notification li{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        word-wrap: break-word;
+        padding: 20px;
+        border-bottom: gray solid 1px;
+    }
+
+    .notification h1{
+        text-align: center;
+        padding: 10px;
+        border-radius: 10px 10px 0 0;
+        color: white;
+        background-color: #343434;
+    }
+
     .notification-toggle:hover{
         box-shadow: 0px 7px 10px 0px rgba(0, 0, 0, 0.5);
     }
@@ -589,13 +610,14 @@
     /*navigation*/
     
     .navbar.white{
-        background-color: rgb(245,244,241);
+        /*background-color: rgb(245,244,241);*/
         cursor: pointer;
     }
 
 
     .navbar.is-shrinked{
         height: 70px;
+        /*box-shadow: 0px 5px 5px 0px lightgray;*/
     }
 
     .nav-menu:hover{
@@ -629,7 +651,7 @@
     .nav-menu li.is-shrinked{
         padding: 10px 25px 0 25px;
     }
-
+    
     .nav-menu li a.is-shrinked{
         color: black;
     }
@@ -656,7 +678,7 @@
     }
 
     .nav-menu li.nav-search input.is-opened{
-        width: 150px;
+        width: 200px;
         padding: 10px;
         border: black solid 1px;
     }
@@ -680,11 +702,11 @@
     }
     
     li.mobile-dropdown1 .mobile-dropdown-list.is-opened{
-        height: 125px;
+        height: 100px;
     }
 
     li.mobile-dropdown2 .mobile-dropdown-list.is-opened{
-        height: 125px;
+        height: 90px;
     }
     
     
@@ -754,7 +776,7 @@
     }
 
     .close.is-shrinked{
-        top: 1%;
+        top: 15px;
     }
 
     .close.is-shrinked span, .close.is-shrinked span::before, .close.is-shrinked span::after{
@@ -783,3 +805,15 @@
         width: 100px;
     }
 }    
+
+@media(max-width: 650px){
+    .mobile-nav-menu li.nav-search .icon-search{
+        left: 84%;
+    }
+}
+
+@media(max-width: 400px){
+    .mobile-nav-menu li.nav-search .icon-search{
+        left: 80%;
+    }
+}
